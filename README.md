@@ -11,8 +11,8 @@
 ![Gradio](https://img.shields.io/badge/GUI-Gradio%20%7C%20Streamlit-F97316)
 ![Status](https://img.shields.io/badge/status-research%20prototype-blue)
 
-[![Open the GUI in Colab](https://colab.research.google.com/drive/1tGTlA_Rhn3L0WG0blJNVVmunUnih3L1B?usp=sharing)
-[![Open the training notebook in Colab](https://colab.research.google.com/drive/1Ze-_IXOMGnTxv5HYxIbk_JYpedSjYwSy?usp=sharing)
+[![Open the GUI in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1tGTlA_Rhn3L0WG0blJNVVmunUnih3L1B?usp=sharing)
+[![Open the training notebook in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Ze-_IXOMGnTxv5HYxIbk_JYpedSjYwSy?usp=sharing)
 
 **Department of Electronics Engineering · SVNIT Surat · Project Phase-I (2025–26)**
 
