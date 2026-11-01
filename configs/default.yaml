@@ -1,0 +1,43 @@
+# AuditoryNet default configuration (values from Table 3.2 of the report)
+data_dir: data
+output_dir: outputs
+tasks: [A, E, I, O, U, petaka, apto]
+
+# Front-end
+sample_rate: 16000
+duration: 3.0          # seconds, zero-pad / truncate
+n_channels: 64         # Gammatone filters
+f_min: 80.0
+f_max: 8000.0
+filter_ms: 25.0        # impulse-response length -> 400 samples @16 kHz
+n_frames: 128
+
+# Training
+batch_size: 16
+epochs: 25
+lr: 0.001
+weight_decay: 0.0001
+dropout: 0.4           # FC1; FC2 uses dropout/2
+grad_clip: 1.0
+n_folds: 5
+seed: 42
+aug_prob: 0.5
+noise_prob: 0.3        # extra anti-overfitting augmentation: additive noise on cochleagram
+noise_std: 0.02
+shift_prob: 0.3        # random circular time shift
+max_shift: 8           # frames
+label_smoothing: 0.05
+val_fraction: 0.15     # inner validation split (from each training fold) used for model selection
+patience: 8            # early stopping on inner-validation AUC
+time_mask_max: 10
+freq_mask_max: 8
+
+# Runtime
+device: auto           # auto | cpu | cuda
+num_workers: 0         # keep 0 on Windows
+amp: false             # mixed precision on CUDA
+
+# Optional: regex with ONE capture group extracting a speaker id from the file
+# stem. If set, folds are speaker-disjoint (StratifiedGroupKFold), which avoids
+# optimistic leakage when one speaker has several recordings. Example: "^(\\w+?)_"
+speaker_regex: null
